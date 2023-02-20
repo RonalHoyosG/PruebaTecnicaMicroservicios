@@ -1,0 +1,385 @@
+{
+	"info": {
+		"_postman_id": "cfad31bf-d609-4eda-a591-3f59656978d6",
+		"name": "Prueba Técnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17674118"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Actualizar Cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"password\": \"supersecreta\",\r\n    \"status\": true,\r\n    \"person\": {\r\n        \"id\": 4,\r\n        \"names\": \"Jose Miguel Arango\",\r\n        \"gender\": \"M\",\r\n        \"age\": 35,\r\n        \"identification\": 21421615,\r\n        \"address\": \"Bucaramanga\",\r\n        \"phone\": \"98763515\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/clientes/actualizar",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"clientes",
+								"actualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cuentas/eliminar/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cuentas",
+								"eliminar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener clientes por filtro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/clientes/obtener?filtro=bu",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"clientes",
+								"obtener"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "bu"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"ñalsdfjñ\",\r\n    \"status\": true,\r\n    \"person\": {\r\n        \"names\": \"Alejandor Suárez\",\r\n        \"gender\": \"M\",\r\n        \"age\": 25,\r\n        \"identification\": 1345151,\r\n        \"address\": \"Medellín\",\r\n        \"phone\": \"019847786\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/clientes/crear",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"clientes",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuenta",
+			"item": [
+				{
+					"name": "Crear Cuenta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\": \"123415\",\r\n    \"type\": \"Ahorros\",\r\n    \"initialBalance\": 2200000,\r\n    \"status\": true,\r\n    \"clientId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/cuentas/crear",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cuentas",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar cuenta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"accountNumber\": \"123415\",\r\n    \"type\": \"Corriente\",\r\n    \"initialBalance\": 2200000,\r\n    \"status\": true,\r\n    \"clientId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/cuentas/actualizar",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cuentas",
+								"actualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener cuentas por filtro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cuentas/obtener?filtro=34",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cuentas",
+								"obtener"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "34"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar cliente Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/clientes/eliminar/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"clientes",
+								"eliminar",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movimientos",
+			"item": [
+				{
+					"name": "Crear Movimiento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"Retiro\",\r\n    \"accountId\": 1,\r\n    \"value\": -135000,\r\n    \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/movimientos/crear",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"movimientos",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener transacciones",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"Deposito\",\r\n    \"accountId\": 1,\r\n    \"value\": -200000,\r\n    \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/movimientos/obtener?fechaInicio=2023-02-10&fechaFin=2023-02-15&filtro",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"movimientos",
+								"obtener"
+							],
+							"query": [
+								{
+									"key": "fechaInicio",
+									"value": "2023-02-10"
+								},
+								{
+									"key": "fechaFin",
+									"value": "2023-02-15"
+								},
+								{
+									"key": "filtro",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Movimiento",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"type\": \"Deposito\",\r\n    \"accountId\": 1,\r\n    \"value\": 500000,\r\n    \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/movimientos/actualizar",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"movimientos",
+								"actualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Movimiento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/movimientos/eliminar/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"movimientos",
+								"eliminar",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movimientos Copy",
+			"item": [
+				{
+					"name": "Obtener transacciones por cliente",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"Deposito\",\r\n    \"accountId\": 1,\r\n    \"value\": -200000,\r\n    \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/reportes/obtener?fechaInicio=2023-02-10&fechaFin=2023-02-15&clientId=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"reportes",
+								"obtener"
+							],
+							"query": [
+								{
+									"key": "fechaInicio",
+									"value": "2023-02-10"
+								},
+								{
+									"key": "fechaFin",
+									"value": "2023-02-15"
+								},
+								{
+									"key": "clientId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
